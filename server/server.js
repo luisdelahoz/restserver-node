@@ -13,7 +13,7 @@ app.use(bodyParser.json());
 
 app.use(require('./routes/usuario'));
 
-mongoose.connect(process.env.URL_DB, {useNewUrlParser: true,  useCreateIndex: true}, (error, response) =>{
+mongoose.connect(process.env.MONGO_URL, {useNewUrlParser: true,  useCreateIndex: true}, (error, response) =>{
 	if(error) throw error;
 	console.log('Base de datos ONLINE');
 });
